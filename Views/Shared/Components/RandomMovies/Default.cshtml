@@ -1,0 +1,11 @@
+﻿@model IEnumerable<WebApplication121024_Films.Models.TvShow>
+
+<h3>Random Movies</h3>
+<ul>
+    @foreach (var movie in Model)
+    {
+        <li>
+            <a asp-controller="TvShows" asp-action="Details" asp-route-id="@movie.Id">@movie.Title</a>
+        </li>
+    }
+</ul>

@@ -1,0 +1,9 @@
+﻿@model WebApplication121024_Films.Models.MovieStatistics
+
+<div class="container">
+    <h2>Movie Statistics</h2>
+    <p>Total Movies: @Model.TotalMovies</p>
+    <p>Average Rating: @Model.AverageRating</p>
+    <p>Top Genre: @Model.TopGenre</p>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Back to Home</a>
+</div>

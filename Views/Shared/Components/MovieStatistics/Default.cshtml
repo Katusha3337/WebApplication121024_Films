@@ -1,0 +1,16 @@
+﻿@model WebApplication121024_Films.Models.MovieStatistics
+
+<h3>Movie Statistics</h3>
+<p>Total Movies: @Model.TotalMovies</p>
+<p>Average Rating: @Model.AverageRating</p>
+<p>Top Genre: @Model.TopGenre</p>
+
+<h4>Genres</h4>
+<ul>
+    @foreach (var genre in Model.Genres)
+    {
+        <li>
+            <a asp-controller="TvShows" asp-action="Genre" asp-route-genre="@genre.Genre">@genre.Genre (@genre.Count)</a>
+        </li>
+    }
+</ul>
